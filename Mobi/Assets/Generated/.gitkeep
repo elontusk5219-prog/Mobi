@@ -1,0 +1,2 @@
+# 管线生成的 portrait_*.png、loop_*_blink.mp4 放在 {user_id}/ 下
+# 运行: ../Mobi资产生成/scripts/sync_assets_to_app.sh "$SRCROOT" variant_default

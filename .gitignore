@@ -1,0 +1,29 @@
+# 本地密钥与环境（勿提交）
+Config/Secrets.xcconfig
+backend/.env
+# Xcode
+build/
+DerivedData/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+
+# Node（画像后端）
+backend/node_modules/
+backend/npm-debug.log
+
+# 通用
+.DS_Store
+*.swp
+*.swo
+*~
