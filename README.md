@@ -45,18 +45,18 @@
 ## 截图
 
 | Anima · 创造仪式 | Genesis · 诞生 | Room · 陪伴 |
-|-----------------|---------------|-------------|
-| [![Anima](screenshots/01-Anima-Orb.png)](screenshots/01-Anima-Orb.png) | [![Genesis](screenshots/02-Genesis-Transition.png)](screenshots/02-Genesis-Transition.png) | [![Room](screenshots/03-Room-Mobi.png)](screenshots/03-Room-Mobi.png) |
+|:---:|:---:|:---:|
+| <img src="screenshots/01-Anima-Orb.png" width="220"/> | <img src="screenshots/02-Genesis-Transition.png" width="220"/> | <img src="screenshots/03-Room-Mobi.png" width="220"/> |
 
 | 学说话 · 铭印 | 记忆日记 | Kuro · 规则守护者 |
-|---------------|----------|-------------------|
-| [![学说话](screenshots/04-Imprint-Celebration.png)](screenshots/04-Imprint-Celebration.png) | [![日记](screenshots/05-Memory-Diary.png)](screenshots/05-Memory-Diary.png) | [![Kuro](screenshots/06-Kuro-Overlay.png)](screenshots/06-Kuro-Overlay.png) |
+|:---:|:---:|:---:|
+| <img src="screenshots/04-Imprint-Celebration.png" width="220"/> | <img src="screenshots/05-Memory-Diary.png" width="220"/> | <img src="screenshots/06-Kuro-Overlay.png" width="220"/> |
 
 | 登录 / 注册 | 布置房间 | 设置 |
-|-------------|----------|------|
-| [![登录](screenshots/07-Auth.png)](screenshots/07-Auth.png) | [![布置](screenshots/08-Room-Decor.png)](screenshots/08-Room-Decor.png) | [![设置](screenshots/09-Settings.png)](screenshots/09-Settings.png) |
+|:---:|:---:|:---:|
+| <img src="screenshots/07-Auth.png" width="220"/> | <img src="screenshots/08-Room-Decor.png" width="220"/> | <img src="screenshots/09-Settings.png" width="220"/> |
 
-更多截图与拍摄说明见 [screenshots/README.md](screenshots/README.md)。
+> 更多截图与拍摄说明见 [screenshots/README.md](screenshots/README.md)。当前为占位图，建议在模拟器或真机中运行 App 后按说明拍摄真实截图替换。
 
 ---
 
