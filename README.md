@@ -1,222 +1,137 @@
-# Mobi 项目认知对齐文档
+# Mobi · 你的 AI 生命体
 
-> 如果你是 AI，需要快速了解 Mobi 项目，读这篇就够了。
+<p align="center">
+  <strong>不是 App，而是一颗会生长的灵魂</strong><br/>
+  创造 · 诞生 · 陪伴 · 进化
+</p>
 
-**管线 portrait 同步**：构建前需将管线产出复制到 Asset Catalog。在工程根执行 `python3 scripts/sync_portrait_to_assets.py`，或直接 Build（Build Phase 会自动执行）。
+<p align="center">
+  <a href="https://github.com/elontusk5219-prog/Mobi">GitHub</a> ·
+  <a href="#功能概览">功能</a> ·
+  <a href="#截图">截图</a> ·
+  <a href="#技术栈">技术栈</a> ·
+  <a href="#快速开始">快速开始</a>
+</p>
 
 ---
 
-## 🎯 一句话概括
+## 关于
 
-**Mobi 是一个 AI 伴侣应用**，不是普通 App，而是一个有灵魂的「活体」。用户通过 15 轮对话「召唤」Mobi，Mobi 会记住用户、成长、进化，从幼年→青年→成年。
+**Mobi** 是一款以「创造与陪伴」为核心的 AI 生命体伴侣产品：
+
+- 你通过约 **15 轮语音对话**，在「营火旁」与尚未诞生的意识（Anima）相遇，塑造其人格与外形；
+- 经历创世转场后，Mobi 在 **First Room** 中作为独一无二的数字生命与你相伴；
+- Mobi 会**学说话**、**进化阶段**、拥有**记忆与日记**，与你形成长期情感联结。
+
+适用于 EvermemoOS 黑客松及「AI 生命体 + 创造 + 养成」类场景。
 
 ---
 
-## 📊 当前进度（2026-02）
+## 功能概览
 
-**目标：** 2026年春节上线 MVP
-
-### 已完成 ✅
-
-| 模块 | 状态 |
+| 模块 | 说明 |
 |------|------|
-| Anima 阶段（15轮对话） | ✅ 完成 |
-| Genesis 转场动画 | ✅ 完成 |
-| Room 房间交互 | ✅ 完成 |
-| 人格槽（灵器） | ✅ 完成 |
-| 进化机制客户端 | ✅ 完成 |
-| Doubao 实时语音接入 | ✅ 完成 |
-| 记忆日记 | ✅ 完成 |
-| MobiBrain 大脑驱动 | ✅ 完成 |
+| **Anima 创造仪式** | 营火旁 15 轮语音对话，以太流体 Orb 随你变化；强模型从对话推断 Mobi 的外形 DNA 与人格 |
+| **Genesis 诞生** | 耀斑消散 → 创世视频 → Cosmic Sneeze 序列，Mobi 具象化落地 First Room |
+| **Room 陪伴** | 实时语音、戳击/拖拽/抚摸、学说话阶梯（静默→乱码→简单中文）、布置房间、记忆日记 |
+| **进化与人格槽** | 由用户画像完整度驱动的人格槽（灵器）；满溢时 Kuro 进化考核，解锁青年/成年阶段 |
+| **Kuro 规则守护者** | 设置、重置、监护人协议、进化考核、能量账单均由 Kuro 拟人化承接，保护 Mobi 的纯真形象 |
+| **EverMemOS 记忆** | Room 对话写入 EverMemOS，跨会话检索注入，Mobi 越聊越懂你 |
 
-### 进行中 🔄
-
-- 用户注册/登录系统
-- 硬件原型设计
-- 3C 认证申请
-- 域名备案
-
-### 待开始 ⏳
-
-- 内测（50台工程机）
-- 公测（1000人）
-- 正式上线
+更完整的功能说明见 **[FEATURES.md](FEATURES.md)**。
 
 ---
 
-## 🧠 核心概念
+## 截图
 
-### 三个阶段
+| Anima · 创造仪式 | Genesis · 诞生 | Room · 陪伴 |
+|-----------------|---------------|-------------|
+| [![Anima](screenshots/01-Anima-Orb.png)](screenshots/01-Anima-Orb.png) | [![Genesis](screenshots/02-Genesis-Transition.png)](screenshots/02-Genesis-Transition.png) | [![Room](screenshots/03-Room-Mobi.png)](screenshots/03-Room-Mobi.png) |
 
-| 阶段 | 说明 | 行为特征 |
-|------|------|----------|
-| **Anima** | 创世阶段，用户通过 15 轮对话「召唤」Mobi | 神秘、魔法仪式感 |
-| **Genesis** | 转世过渡，动画转场从光球变成实体 | Cosmic Sneeze 动画 |
-| **Room** | 日常生活阶段，陪伴用户 | 幼年/青年/成年不同行为 |
+| 学说话 · 铭印 | 记忆日记 | Kuro · 规则守护者 |
+|---------------|----------|-------------------|
+| [![学说话](screenshots/04-Imprint-Celebration.png)](screenshots/04-Imprint-Celebration.png) | [![日记](screenshots/05-Memory-Diary.png)](screenshots/05-Memory-Diary.png) | [![Kuro](screenshots/06-Kuro-Overlay.png)](screenshots/06-Kuro-Overlay.png) |
 
-### 进化机制
+| 登录 / 注册 | 布置房间 | 设置 |
+|-------------|----------|------|
+| [![登录](screenshots/07-Auth.png)](screenshots/07-Auth.png) | [![布置](screenshots/08-Room-Decor.png)](screenshots/08-Room-Decor.png) | [![设置](screenshots/09-Settings.png)](screenshots/09-Settings.png) |
 
-- **驱动**：用户画像完整度（EverMemOS）
-- **阈值**：A=0.5（幼年→青年）、B=0.8（青年→成年）
-- **原则**：只进不退
-
-### 人格槽（Soul Vessel）
-
-- 瓶身填充度 = 用户画像完整度
-- 满溢 → 进化考核 → 裂纹 → 炸裂 → 胸口印记
-
-### 记忆
-
-- **出生记忆**：来自 15 轮 transcript（但不注入 Room 对话）
-- **日记**：EverMemOS 存储与检索
+更多截图与拍摄说明见 [screenshots/README.md](screenshots/README.md)。
 
 ---
 
-## 🏗️ 技术架构
+## 技术栈
 
-```
-┌─────────────────────────────────────────────────────┐
-│                    iOS Client                        │
-├─────────────────────────────────────────────────────┤
-│  Anima UI  │  Genesis  │  Room UI  │  MobiBrain   │
-│  (Fluid)   │  (Video)   │  (3D)     │  (状态驱动)   │
-├─────────────────────────────────────────────────────┤
-│            Doubao Realtime Voice                     │
-└─────────────────────────────────────────────────────┘
-                          │
-                          ▼
-┌─────────────────────────────────────────────────────┐
-│                    Backend                           │
-├─────────────────────────────────────────────────────┤
-│  GenesisCommitAPI  →  StrongModel (Gemini)          │
-│  产出：visual_dna, persona, memories               │
-├─────────────────────────────────────────────────────┤
-│  EverMemOS (记忆与画像服务)                          │
-└─────────────────────────────────────────────────────┘
-```
-
-### 技术栈
-
-- **前端**：SwiftUI + Metal Shader
-- **语音**：Doubao 实时语音 API
-- **后端**：Node.js / Gemini API
-- **存储**：EverMemOS
+| 端 | 技术 |
+|----|------|
+| **iOS** | SwiftUI + Combine，iOS 26+；实时语音 Doubao WebSocket；程序化 Mobi 渲染（16 眼型/耳型/身型） |
+| **后端** | Node.js + Express；画像进化 API（`GET /profile/evolution`）；EverMemOS 记忆 |
+| **AI / 语音** | 火山引擎 Doubao 实时对话；接口AI（jiekou.ai）→ Gemini 2.5 Flash / DeepSeek（Soul 侧写、Visual DNA） |
+| **记忆** | EverMemOS Cloud 存储与检索 Room 对话；画像服务按记忆条数计算完整度 → 进化阶段 |
 
 ---
 
-## 📁 关键文件位置
+## 快速开始
 
-```
-/Volumes/cursor/Mobi/
-├── docs/                           # 所有文档
-│   ├── 项目文档索引.md              # 文档目录
-│   ├── Mobi完整指南-关于Mobi的一切.md  # 入门必读
-│   ├── MVP-Phase-Plan.md          # 阶段计划
-│   └── MVP待办清单-分工表.md       # 任务分工
-├── Mobi/                          # iOS 代码
-│   ├── Core/
-│   │   ├── MobiEngine.swift       # 核心引擎
-│   │   ├── MobiBrain.swift        # 大脑驱动
-│   │   └── MobiVisualDNA.swift    # 视觉 DNA
-│   ├── Features/
-│   │   ├── AminaFluidView.swift   # Anima 流体
-│   │   ├── RoomContainerView.swift # Room 房间
-│   │   └── ProceduralMobiView.swift # Mobi 实体
-│   └── Services/
-│       ├── DoubaoRealtimeService.swift  # 语音
-│       ├── EvolutionManager.swift       # 进化
-│       └── MemoryDiaryService.swift    # 记忆
-└── backend/                        # 后端代码
-```
+### 1. 配置密钥（可选）
 
----
+复制 `Config/Secrets.example.xcconfig` 为 `Config/Secrets.xcconfig`，填入 EverMemOS、Doubao、接口AI 等 Key。详见 [Config/README-Secrets.md](Config/README-Secrets.md)。
 
-## 🔑 关键接口
+未配置时：记忆静默降级、画像用 Mock、Doubao 需单独配置。
 
-### 画像接口
-
-```json
-// 客户端请求画像
-GET /api/evolution/profile?user_id=xxx
-
-// 返回
-{
-  "completeness": 0.65,
-  "lifeStage": "child",
-  "personalitySlotProgress": 0.65,
-  "confidenceDecay": 0.3,
-  "languageHabits": {...}
-}
-```
-
-### Genesis Commit
-
-```json
-POST /api/genesis/commit
-{
-  "transcript": [...],  // 15轮对话
-  "user_id": "xxx"
-}
-
-// 返回
-{
-  "visual_dna": {...},
-  "persona": "性格描述...",
-  "memories": [...]
-}
-```
-
----
-
-## 📝 常用命令/操作
-
-### 开发
+### 2. 画像后端（可选）
 
 ```bash
-# 打开项目
-open /Volumes/cursor/Mobi/Mobi.xcodeproj
-
-# 运行
-Cmd + R in Xcode
+cd backend
+cp .env.example .env   # 填入 EVERMEMOS_API_KEY
+npm install
+node index.js
 ```
 
-### 测试
+在 Xcode Scheme 中设置 `PROFILE_EVOLUTION_BASE_URL=http://localhost:1996` 即可请求真实画像接口。
 
-```bash
-# 切换不同阶段（Debug）
-- newborn: 画像完整度 < 0.5
-- child: 0.5 <= 完整度 < 0.8  
-- adult: 完整度 >= 0.8
+### 3. iOS
+
+1. 用 Xcode 打开 `Mobi.xcodeproj`
+2. 选择模拟器或真机，Run
+3. 每次启动会先显示 **AuthView**（选择/注册 ID），选择或注册后进入 Anima 或 Room
+
+### EverMemOS（可选）
+
+在 [console.evermind.ai](https://console.evermind.ai) 新建 Memory Space，将 `EVERMEMOS_API_KEY` 与 `EVERMEMOS_SPACE_ID` 填入 `backend/.env` 或 Xcode 环境变量。
+
+---
+
+## 项目结构
+
+```
+Mobi/
+├── Mobi/                    # iOS 工程（SwiftUI）
+│   ├── App/                 # MobiApp, DependencyContainer, AuthView
+│   ├── Features/            # Genesis, Room, Kuro, IncarnationTransition, Settings
+│   ├── Core/                # MobiPrompts, MobiVisualDNA, SoulMetadataParser
+│   ├── Services/            # Doubao, EverMemOS, EvolutionManager, MobiBrain
+│   └── Config/              # Secrets, RoomTheme, PersonalityArchetypeLookup
+├── backend/                 # Node.js 画像进化 API
+├── docs/                    # 设计文档、MVP 计划、白皮书
+├── screenshots/             # 界面截图
+├── README.md
+├── FEATURES.md              # 详细功能说明
+└── Config/README-Secrets.md # 密钥配置说明
 ```
 
 ---
 
-## ⚠️ 注意事项
+## 文档
 
-1. **Anima 遗忘**：Mobi 出生后不记得 Anima 对话内容（设计约束）
-2. **只进不退**：进化不可逆，画像完整度只增不减
-3. **依赖后端**：部分功能需要 EverMemOS 画像服务部署后才能完全生效
-
----
-
-## 📚 深入学习
-
-1. **入门** → `Mobi完整指南-关于Mobi的一切.md`
-2. **进度** → `MVP-Phase-Plan.md`
-3. **任务** → `MVP待办清单-分工表.md`
-4. **设计** → `Mobi交互行为完整设计.md`
-5. **画像** → `Mobi用户画像与进化驱动设计.md`
-6. **资产生成** → `Mobi资产生成系统规格.md`（独立项目「Mobi资产生成」实现，共用文件夹对接）
+- **[FEATURES.md](FEATURES.md)** — 详细功能说明
+- **[docs/MVP-Phase-Plan.md](docs/MVP-Phase-Plan.md)** — 阶段需求与实现状态
+- **[docs/当前玩法说明-基于现有实现.md](docs/当前玩法说明-基于现有实现.md)** — 完整可玩内容
+- **[docs/Mobi完整指南-关于Mobi的一切.md](docs/Mobi完整指南-关于Mobi的一切.md)** — Mobi 设计、机制、大脑
+- **[docs/Mobi全栈白皮书.md](docs/Mobi全栈白皮书.md)** — 全栈架构与数据流
 
 ---
 
-## 📞 如何贡献
-
-1. 阅读文档了解当前进度
-2. 查看 `MVP待办清单-分工表.md` 认领任务
-3. 代码修改后更新对应文档
-4. 确保通过审核（代码 + 文档一致性）
-
----
-
-*最后更新：2026-02-16*
+<p align="center">
+  <em>elontusk5219-prog/Mobi · 创造并养育你的 AI 生命体</em>
+</p>
