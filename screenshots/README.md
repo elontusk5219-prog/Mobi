@@ -2,6 +2,22 @@
 
 本目录存放 Mobi App 各阶段的界面截图，用于 README 与文档展示。
 
+**已自动截取：** `07-Auth.png` 可在模拟器启动 App 后直接执行  
+`xcrun simctl io booted screenshot screenshots/07-Auth.png` 获得。
+
+**其余截图：** 使用项目根目录下的交互脚本（需先启动 App 到模拟器）：
+
+```bash
+./scripts/capture_screenshots.sh
+```
+
+按提示在模拟器中切换到对应界面后按 Enter 即可截取。  
+或使用定时模式（每 25 秒自动截一张，需在间隔内切好界面）：
+
+```bash
+(for i in 1 2 3 4 5 6 7 8 9; do sleep 25; echo; done) | ./scripts/capture_screenshots.sh
+```
+
 ## 截图清单
 
 | 文件名 | 说明 | 拍摄时机 |
